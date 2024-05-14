@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Gowun+Dodum&family=Jua&family=Nanum+Myeongjo&display=swap");
+// font-family: "Gowun Dodum", sans-serif;
+// font-family: "Gothic A1", sans-serif;
+// font-family: "Jua", sans-serif;
+// font-family: "Nanum Myeongjo", serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url(https://64.media.tumblr.com/76a316772f5b18828e6a2287312ca02e/9f327232951dccf6-c9/s75x75_c1/ff722b2cc6fbd098b618717fcde59658dba5643b.png),
+    auto;
+}
+
+.myWrapper {
+  background-image: url("https://images.unsplash.com/photo-1584531979583-18c5c4b25efc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBhcGVyJTIwdGV4dHVyZXxlbnwwfHwwfHx8MA%3D%3D");
+  //   background-size: cover;
+  background-size: contain;
+}
+
+body {
+  color: #3a3737;
+  // color: #a0e8f7;
+  font-family: "Gothic A1", sans-serif;
+
+  .myNavBar {
+    font-family: "Nanum Myeongjo", serif;
+  }
+
+  h1 {
+    font-family: "Nanum Myeongjo", serif;
+    @apply text-3xl font-extrabold;
+  }
+
+  .logoImage {
+    @apply w-40;
+  }
+
+  #heroSection {
+    @apply grow flex flex-row justify-evenly items-center;
+    .decor {
+      @apply w-60;
+      &.left:hover {
+        transform: rotate(-20deg);
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+      }
+      &.right:hover {
+        transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+        -o-transform: rotate(20deg);
+      }
+    }
+    .mainpart {
+      @apply flex flex-col justify-center items-center gap-5;
+
+      .logoImage {
+        animation: rotateCircle linear 8s infinite;
+        -webkit-animation: rotateCircle linear 8s infinite;
+      }
+
+      button {
+        @apply py-2 px-8  border border-normalText rounded-md bg-nonPhotoBlue;
+        &:hover {
+          @apply bg-transparent;
+          cursor: url(https://64.media.tumblr.com/e5a7b8e400b9cb02adf324c28fa03849/9f327232951dccf6-c1/s75x75_c1/f61f89cd665e1a28af29ecdbc39356fbf4555e7a.png),
+            auto;
+        }
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+      }
+    }
+  }
+
+  .projectHero {
+    .logoImage {
+      @apply w-40;
+    }
+  }
+
+  .allProjectsContainer {
+    @apply grid grid-flow-col;
+
+    .projectWrapper {
+        @apply flex flex-col justify-center w-56 text-center;
+        figure {
+            @apply w-56 h-56 overflow-hidden;
+        }
+        h2 {
+            @apply font-extrabold text-xl; 
+        }
+    }
+  }
+}
+
+.langBtns {
+  @apply rounded-md border border-normalText;
+  p {
+    @apply w-8 flex justify-center items-center;
+  }
+  .langOn {
+    @apply bg-lavender-pink;
+  }
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg); /* Initial rotation angle */
+  }
+  to {
+    transform: rotate(360deg); /* Final rotation angle */
+  }
+}
